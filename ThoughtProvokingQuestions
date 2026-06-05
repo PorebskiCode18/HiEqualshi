@@ -1,0 +1,39 @@
+1)How might you compare two characters without reference to case? 
+How might you do this without destroying the character variable(s) contents?
+
+    The easiest way to compare two characters without reference to case is by 
+    temporarily converting both characters to either upper case or lower case (
+    I prefer lower case). To make sure i dont destroy the character variable
+    contents I can set this toLower equal to a temporary variable, in turn not
+    affecting the original contents.
+
+2)How can you compare two strings in a case-insensitive way without destroying their contents?
+
+    I can compare two strings in a case insensitive way by examining each
+    string one character at a time and temporarily converting each character to
+    lower case for comparison in turn not affecting the original strings.
+
+3)What kind of arguments should your string comparison function take? 
+Are you going to pass these arguments by value or by reference?
+
+    The function should take both the strings as arguements because I have to
+    compare the two strings. I am going to pass these arguments by reference
+    using pointers so that unneccessary copies arent made and the original
+    strings arent modified.
+
+4)Why do you think the return value of strcmp is “greater than zero”, 
+“less than zero”, and “equal to zero” rather than -1, 0, 1 specifically?
+
+    I think it does this because the exact value isnt important as z and b are
+    both greater than a in character value but z has a much greater value than
+    b. So instead of returning the specific value which doesnt accomplish the
+    task of strcmp, it just returns if the value is negative, positive, or zero.
+
+5)What cases might you need to consider to test your function thoroughly? How
+many times should you have to run the driver to do this testing?
+
+    I should test strings that are exactly equal, strings that differ by
+    capitalized characters, strings that are alphabetically before or after one
+    another, empty strings, and strings that are different near the end. The
+    driver however only needs to run once because we can add all these tests in
+    one driver function.
